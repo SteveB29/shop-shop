@@ -33,7 +33,7 @@ function ProductList() {
       // add else if to check if 'loading' us undefuned in `useQuery()` hook
     } else if (!loading) {
       // since we're offline, get all of thedata from the `products` store
-      idbPromise('promise', 'get').then((products) => {
+      idbPromise('products', 'get').then((products) => {
         // use retrieved data to set global state for offline browsing
         dispatch({
           type: UPDATE_PRODUCTS,
